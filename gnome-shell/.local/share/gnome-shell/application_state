@@ -1,32 +1,33 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
-    <application id="gparted.desktop" score="30" last-seen="1660922047"/>
-    <application id="Alacritty.desktop" score="19" last-seen="1660960251"/>
-    <application id="kitty.desktop" score="1741" last-seen="1660963002"/>
-    <application id="org.gnome.FileRoller.desktop" score="1" last-seen="1660712336"/>
+    <application id="kitty.desktop" score="1850" last-seen="1660968925"/>
     <application id="install4j_o74srs-JDownloader2.desktop" score="5292" last-seen="1660894650"/>
-    <application id="codium.desktop" score="7686" last-seen="1660962986"/>
-    <application id="org.gnome.Shell.Extensions.desktop" score="15" last-seen="1660447268"/>
+    <application id="Alacritty.desktop" score="19" last-seen="1660960251"/>
+    <application id="firefox.desktop" score="11583" last-seen="1660968766"/>
     <application id="org.gnome.tweaks.desktop" score="3" last-seen="1660844486"/>
-    <application id="foot.desktop" score="2" last-seen="1660446570"/>
-    <application id="org.gnome.gedit.desktop" score="2" last-seen="1660889476"/>
-    <application id="org.gnome.eog.desktop" score="3" last-seen="1660889430"/>
-    <application id="org.gnome.Nautilus.desktop" score="32" last-seen="1660447505"/>
     <application id="com.mattjakeman.ExtensionManager.desktop" score="15" last-seen="1660447269"/>
-    <application id="com.usebottles.bottles.desktop" score="96" last-seen="1660362026"/>
-    <application id="mpv.desktop" score="6200" last-seen="1660924598"/>
-    <application id="xarchiver.desktop" score="32" last-seen="1660726970"/>
-    <application id="org.gnome.Calculator.desktop" score="177" last-seen="1660794525"/>
-    <application id="org.gnome.clocks.desktop" score="0" last-seen="1660704110"/>
-    <application id="pcmanfm.desktop" score="3758" last-seen="1660962987"/>
-    <application id="firefox.desktop" score="11113" last-seen="1660963342"/>
-    <application id="org.gnome.DiskUtility.desktop" score="9" last-seen="1660921682"/>
-    <application id="thunderbird.desktop" score="0" last-seen="1660704768"/>
-    <application id="org.gnome.Terminal.desktop" score="19" last-seen="1660703714"/>
-    <application id="org.kde.dolphin.desktop" score="3" last-seen="1660621910"/>
     <application id="net.lutris.Lutris.desktop" score="14" last-seen="1660362514"/>
+    <application id="org.gnome.eog.desktop" score="3" last-seen="1660889430"/>
+    <application id="thunderbird.desktop" score="0" last-seen="1660704768"/>
     <application id="org.gnome.Rhythmbox3.desktop" score="56" last-seen="1660894289"/>
-    <application id="org.gnome.Settings.desktop" score="130" last-seen="1660925430"/>
+    <application id="codium.desktop" score="7686" last-seen="1660968767"/>
+    <application id="ca.desrt.dconf-editor.desktop" score="11" last-seen="1660968049"/>
+    <application id="foot.desktop" score="2" last-seen="1660446570"/>
+    <application id="xarchiver.desktop" score="32" last-seen="1660726970"/>
+    <application id="org.gnome.Settings.desktop" score="134" last-seen="1660967980"/>
+    <application id="org.gnome.Calculator.desktop" score="177" last-seen="1660794525"/>
+    <application id="com.usebottles.bottles.desktop" score="96" last-seen="1660362026"/>
+    <application id="org.gnome.Terminal.desktop" score="19" last-seen="1660703714"/>
+    <application id="org.gnome.Shell.Extensions.desktop" score="15" last-seen="1660447268"/>
+    <application id="org.kde.dolphin.desktop" score="3" last-seen="1660621910"/>
+    <application id="org.gnome.DiskUtility.desktop" score="9" last-seen="1660921682"/>
+    <application id="org.gnome.Nautilus.desktop" score="32" last-seen="1660447505"/>
+    <application id="gparted.desktop" score="30" last-seen="1660922047"/>
+    <application id="org.gnome.FileRoller.desktop" score="1" last-seen="1660712336"/>
+    <application id="org.gnome.clocks.desktop" score="0" last-seen="1660704110"/>
+    <application id="pcmanfm.desktop" score="3809" last-seen="1660968927"/>
+    <application id="org.gnome.gedit.desktop" score="2" last-seen="1660889476"/>
+    <application id="mpv.desktop" score="6200" last-seen="1660924598"/>
   </context>
 </application-state>

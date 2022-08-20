@@ -1,0 +1,3 @@
+Export Ubuntu shortcuts: keybindings.pl -e keys.csv  
+
+Import (DANGER) Ubuntu shortcuts: keybindings.pl -i keys.csv 
