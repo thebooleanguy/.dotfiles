@@ -1,0 +1,131 @@
+10
+12
+id: 6771615d-cb07-45b1-9586-32bf2b45b97d
+file: Primal.S01E10.Slave.of.the.Scorpion.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:25:28
+downloaded: 105670908
+size: 105670908
+progress: 95
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: 410ade20-8564-4cf2-8e11-60271aa31748
+file: Primal.S01E08.Coven.of.the.Damned.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:24:41
+downloaded: 105596358
+size: 105596358
+progress: 96
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: ffba3f4d-0e04-4a5e-bb4c-44f9dd1de90b
+file: Primal.S01E09.The.Night.Feeder.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:25:04
+downloaded: 105598552
+size: 105598552
+progress: 95
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: d554f834-0594-41bd-9359-07014d2abf37
+file: Primal.S01E03.A.Cold.Death.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:12:30
+downloaded: 105492511
+size: 105492511
+progress: 92
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: 8c0c940f-f9c0-4c30-bbb7-af4418dc311d
+file: Primal.S01E07.Plague.of.Madness.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:24:23
+downloaded: 105638783
+size: 105638783
+progress: 97
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: dc82c3a8-d973-4c52-a851-c57e945760ee
+file: Primal.S01E02.River.of.Snakes.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:12:07
+downloaded: 105672050
+size: 105672050
+progress: 96
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: 5e17f65d-a88d-4783-b54d-f21fae259d86
+file: Primal.S01E05.Rage.of.the.Ape-Men.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:23:50
+downloaded: 105705117
+size: 105705117
+progress: 95
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: f76e5b75-28ce-433f-a83b-7e7a98a592fe
+file: Primal.S01E06.Scent.of.Prey.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:24:07
+downloaded: 105641414
+size: 105641414
+progress: 95
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: ff23da40-f072-4aa2-8247-b71f091c0156
+file: Primal.S01E04.Terror.Under.the.Blood.Moon.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:23:17
+downloaded: 105719251
+size: 105719251
+progress: 96
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0
+12
+id: c6c45c05-49ec-4a59-a19f-b945e2fe4400
+file: Primal.S01E01.Spear.and.Fang.720p.WEB-DL.x264-Pahe.ph.mkv
+category: 30
+state: 100
+folder: /home/xany/Downloads/Video
+date: 2022-08-14 09:07:52
+downloaded: 105637014
+size: 105637014
+progress: 97
+tempfolder: /home/xany/.xdman/temp
+queueid: 
+formatIndex: 0

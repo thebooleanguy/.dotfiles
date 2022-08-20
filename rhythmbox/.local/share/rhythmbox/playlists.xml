@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rhythmdb-playlists>
+  <playlist name="My Top Rated" show-browser="true" browser-position="180" search-type="search-match" type="automatic" sort-key="Rating" sort-direction="1">
+    <conjunction>
+      <equals prop="type">song</equals>
+      <subquery>
+        <conjunction>
+          <greater prop="rating">4.000000</greater>
+        </conjunction>
+      </subquery>
+    </conjunction>
+  </playlist>
+  <playlist name="Recently Added" show-browser="true" browser-position="180" search-type="search-match" type="automatic" sort-key="FirstSeen" sort-direction="1">
+    <conjunction>
+      <equals prop="type">song</equals>
+      <subquery>
+        <conjunction>
+          <current-time-within prop="first-seen">604800</current-time-within>
+        </conjunction>
+      </subquery>
+    </conjunction>
+  </playlist>
+  <playlist name="Recently Played" show-browser="true" browser-position="180" search-type="search-match" type="automatic" sort-key="LastPlayed" sort-direction="1">
+    <conjunction>
+      <equals prop="type">song</equals>
+      <subquery>
+        <conjunction>
+          <current-time-within prop="last-played">604800</current-time-within>
+        </conjunction>
+      </subquery>
+    </conjunction>
+  </playlist>
+  <playlist name="Lofi Girl" show-browser="true" browser-position="180" search-type="search-match" type="static">
+    <location>file:///home/xany/Music/Lofi%20Girl/Purrple%20Cat%20-%20Distant%20Worlds%20%F0%9F%AA%90%20%5Blofi%20hip%20hop_relaxing%20beats%5D.mp3</location>
+    <location>file:///home/xany/Music/Lofi%20Girl/Cozy%20Winter%20%E2%9D%84%EF%B8%8F%20-%20%5Blofi%20hip%20hop_study%20beats%5D.mp3</location>
+    <location>file:///home/xany/Music/Lofi%20Girl/1%20A.M%20Study%20Session%20%F0%9F%93%9A%20-%20%5Blofi%20hip%20hop_chill%20beats%5D.mp3</location>
+  </playlist>
+  <playlist name="Lofi Girl" show-browser="true" browser-position="180" search-type="search-match" type="static">
+    <location>file:///home/xany/Music/Lofi%20Girl/Purrple%20Cat%20-%20Distant%20Worlds%20%F0%9F%AA%90%20%5Blofi%20hip%20hop_relaxing%20beats%5D.mp3</location>
+    <location>file:///home/xany/Music/Lofi%20Girl/Cozy%20Winter%20%E2%9D%84%EF%B8%8F%20-%20%5Blofi%20hip%20hop_study%20beats%5D.mp3</location>
+    <location>file:///home/xany/Music/Lofi%20Girl/1%20A.M%20Study%20Session%20%F0%9F%93%9A%20-%20%5Blofi%20hip%20hop_chill%20beats%5D.mp3</location>
+  </playlist>
+  <playlist name="Play Queue" show-browser="false" browser-position="180" search-type="search-match" type="queue"/>
+</rhythmdb-playlists>
