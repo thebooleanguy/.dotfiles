@@ -64,6 +64,10 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 #silent make
 #alias make='make -s'
 
+##yt-dlp
+#download yt vid as mp3
+alias mp3='yt-dlp -x --audio-format mp3'
+
 ##Startup Commands
 xset r rate 300 50
 colorscript random

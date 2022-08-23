@@ -24,11 +24,10 @@
 const { GObject, Gtk } = imports.gi;
 const { PrefsWidget } = imports.prefs;
 const Me = imports.misc.extensionUtils.getCurrentExtension();
-const { settings } = Me.imports;
+const { settings, translations } = Me.imports;
 
 var PrefsDialog = GObject.registerClass(
     {
-        Template: Me.dir.get_child('prefsdialog.ui').get_uri(),
         Properties: {
             settings: GObject.ParamSpec.object('settings', '', '', GObject.ParamFlags.READWRITE | GObject.ParamFlags.CONSTRUCT_ONLY, settings.Settings),
         },
@@ -37,9 +36,20 @@ var PrefsDialog = GObject.registerClass(
         _init(params) {
             super._init(params);
 
-            this.get_content_area().add(new PrefsWidget({
+            this.set_title(translations.gettext('Preferences'));
+            this.set_default_size(640, 576);
+            this.set_icon_name('preferences-system');
+
+            const widget = new PrefsWidget({
                 settings: this.settings,
-            }));
+            });
+
+            const content_area = this.get_content_area();
+
+            if (content_area.append)
+                content_area.append(widget);
+            else
+                content_area.pack_start(widget, true, true, 0);
         }
     }
 );

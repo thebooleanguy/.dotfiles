@@ -1,0 +1,9 @@
+game:
+  exe: /home/xany/Applications/Omnibus/Omnibus.exe
+  prefix: ~/.wine-prefixes/default
+system: {}
+wine:
+  battleye: false
+  eac: false
+  fsr: false
+  fsync: false

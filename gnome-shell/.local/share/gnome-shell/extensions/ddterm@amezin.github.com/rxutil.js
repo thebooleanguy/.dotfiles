@@ -19,7 +19,7 @@
 
 'use strict';
 
-const { GObject } = imports.gi;
+const { GObject, Gio } = imports.gi;
 
 const Me = imports.misc.extensionUtils.getCurrentExtension();
 const { rxjs } = Me.imports.rxjs;
@@ -147,7 +147,7 @@ function disable_if(condition, disabled_override = rxjs.EMPTY) {
 
 /* exported enable_if disable_if */
 
-class Scope extends rxjs.Subscription {
+var Scope = class Scope extends rxjs.Subscription {
     constructor(obj, destroy_signal = null) {
         super();
 
@@ -174,10 +174,26 @@ class Scope extends rxjs.Subscription {
     connect_after(source, signal_name, handler) {
         return this.add(signal_connect_after(source, signal_name, handler));
     }
-}
+
+    make_simple_action(name, fn) {
+        const action = new Gio.SimpleAction({ name });
+        this.connect(action, 'activate', fn);
+        return action;
+    }
+
+    make_simple_actions(mapping) {
+        const group = Gio.SimpleActionGroup.new();
+
+        Object.entries(mapping).forEach(args => {
+            group.add_action(this.make_simple_action(...args));
+        });
+
+        return group;
+    }
+};
 
 function scope(obj, destroy_signal = null) {
     return new Scope(obj, destroy_signal);
 }
 
-/* exported scope */
+/* exported Scope scope */

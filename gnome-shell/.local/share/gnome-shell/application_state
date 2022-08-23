@@ -1,33 +1,31 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
-    <application id="kitty.desktop" score="1850" last-seen="1660968925"/>
-    <application id="install4j_o74srs-JDownloader2.desktop" score="5292" last-seen="1660894650"/>
-    <application id="Alacritty.desktop" score="19" last-seen="1660960251"/>
-    <application id="firefox.desktop" score="11583" last-seen="1660968766"/>
-    <application id="org.gnome.tweaks.desktop" score="3" last-seen="1660844486"/>
-    <application id="com.mattjakeman.ExtensionManager.desktop" score="15" last-seen="1660447269"/>
-    <application id="net.lutris.Lutris.desktop" score="14" last-seen="1660362514"/>
-    <application id="org.gnome.eog.desktop" score="3" last-seen="1660889430"/>
-    <application id="thunderbird.desktop" score="0" last-seen="1660704768"/>
-    <application id="org.gnome.Rhythmbox3.desktop" score="56" last-seen="1660894289"/>
-    <application id="codium.desktop" score="7686" last-seen="1660968767"/>
     <application id="ca.desrt.dconf-editor.desktop" score="11" last-seen="1660968049"/>
-    <application id="foot.desktop" score="2" last-seen="1660446570"/>
-    <application id="xarchiver.desktop" score="32" last-seen="1660726970"/>
-    <application id="org.gnome.Settings.desktop" score="134" last-seen="1660967980"/>
-    <application id="org.gnome.Calculator.desktop" score="177" last-seen="1660794525"/>
-    <application id="com.usebottles.bottles.desktop" score="96" last-seen="1660362026"/>
-    <application id="org.gnome.Terminal.desktop" score="19" last-seen="1660703714"/>
-    <application id="org.gnome.Shell.Extensions.desktop" score="15" last-seen="1660447268"/>
-    <application id="org.kde.dolphin.desktop" score="3" last-seen="1660621910"/>
-    <application id="org.gnome.DiskUtility.desktop" score="9" last-seen="1660921682"/>
-    <application id="org.gnome.Nautilus.desktop" score="32" last-seen="1660447505"/>
     <application id="gparted.desktop" score="30" last-seen="1660922047"/>
-    <application id="org.gnome.FileRoller.desktop" score="1" last-seen="1660712336"/>
-    <application id="org.gnome.clocks.desktop" score="0" last-seen="1660704110"/>
-    <application id="pcmanfm.desktop" score="3809" last-seen="1660968927"/>
-    <application id="org.gnome.gedit.desktop" score="2" last-seen="1660889476"/>
-    <application id="mpv.desktop" score="6200" last-seen="1660924598"/>
+    <application id="kitty.desktop" score="2506" last-seen="1661253167"/>
+    <application id="org.gnome.tweaks.desktop" score="3" last-seen="1660844486"/>
+    <application id="install4j_o74srs-JDownloader2.desktop" score="6413" last-seen="1661230311"/>
+    <application id="brave-browser.desktop" score="193" last-seen="1661230612"/>
+    <application id="codium.desktop" score="10305" last-seen="1661244530"/>
+    <application id="electron.desktop" score="1" last-seen="1661235091"/>
+    <application id="thunar.desktop" score="20" last-seen="1661235224"/>
+    <application id="org.nicotine_plus.Nicotine.desktop" score="14" last-seen="1661234599"/>
+    <application id="arronax.desktop" score="4" last-seen="1660978262"/>
+    <application id="deemix-gui.desktop" score="149" last-seen="1661237577"/>
+    <application id="firefox-developer-edition.desktop" score="0" last-seen="1661049807"/>
+    <application id="engrampa.desktop" score="12" last-seen="1661231279"/>
+    <application id="nemo.desktop" score="19" last-seen="1661050600"/>
+    <application id="xarchiver.desktop" score="32" last-seen="1661082881"/>
+    <application id="firefox.desktop" score="15606" last-seen="1661253016"/>
+    <application id="Alacritty.desktop" score="19" last-seen="1660960251"/>
+    <application id="pcmanfm.desktop" score="4167" last-seen="1661244536"/>
+    <application id="gnome-network-panel.desktop" score="0" last-seen="0"/>
+    <application id="org.gnome.DiskUtility.desktop" score="9" last-seen="1660921682"/>
+    <application id="thunderbird.desktop" score="0" last-seen="1660704768"/>
+    <application id="mpv.desktop" score="7996" last-seen="1661244536"/>
+    <application id="org.gnome.Rhythmbox3.desktop" score="89" last-seen="1661249737"/>
+    <application id="org.gnome.Settings.desktop" score="151" last-seen="1661251212"/>
+    <application id="xed.desktop" score="7" last-seen="1661232066"/>
   </context>
 </application-state>

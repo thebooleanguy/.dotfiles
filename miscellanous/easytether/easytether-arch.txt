@@ -1,0 +1,17 @@
+sudo /usr/bin/easytether-usb
+
+
+
+
+
+sudo systemctl start dhcpcd@tap\\x2deasytether
+
+
+
+
+
+
+
+
+systemctl enable dhcpcd
+systemctl start dhcpcd
