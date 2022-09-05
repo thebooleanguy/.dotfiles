@@ -31,7 +31,7 @@ version:7.2.11
 autoStart:false
 language:en
 downloadAutoStart:false
-showVideoNotification:false
+showVideoNotification:true
 monitorClipboard:false
 categoryOther:/home/xany/Downloads
 categoryCompressed:/home/xany/Downloads/Compressed

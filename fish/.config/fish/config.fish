@@ -21,7 +21,7 @@ alias mouse-off="gsettings set org.gnome.desktop.peripherals.mouse accel-profile
 alias night-light-on='gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true'
 alias night-light-off='gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false'
 #JDownloader2 Dark Mode
-alias jd-dark='yes | cp -f Other-2/JDownloader-2-Dark-Theme/syntheticaBlackEye.jar Applications/jd2/libs/laf'
+alias jd-dark='yes | cp -f Other2/JDownloader-2-Dark-Theme/syntheticaBlackEye.jar Applications/jd2/libs/laf'
 #CPU Performance Governor
 alias cpugetavail='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors'
 alias cpushowcurrent='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor'
@@ -67,6 +67,9 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 ##yt-dlp
 #download yt vid as mp3
 alias mp3='yt-dlp -x --audio-format mp3'
+#download 480p mp4 with .vtt subs and m4a audio
+alias mp4='yt-dlp -f "bv*[height<=480][ext=mp4]+ba[ext=m4a]/b[height<=480][ext=mp4] / bv*+ba
+/b" --all-subs --write-sub'
 
 ##Startup Commands
 xset r rate 300 50

@@ -4,7 +4,7 @@ const { Shell, GLib, Clutter } = imports.gi;
 const Main = imports.ui.main;
 
 const Me = imports.misc.extensionUtils.getCurrentExtension();
-const PaintSignals = Me.imports.effects.paint_signals;
+const { PaintSignals } = Me.imports.effects.paint_signals;
 const Tweener = imports.tweener.tweener;
 
 const transparent = Clutter.Color.from_pixel(0x00000000);
@@ -119,7 +119,7 @@ let _zoomAndFadeOut = function () {
 var AppFoldersBlur = class AppFoldersBlur {
     constructor(connections, prefs) {
         this.connections = connections;
-        this.paint_signals = new PaintSignals.PaintSignals(connections);
+        this.paint_signals = new PaintSignals(connections);
         this.prefs = prefs;
     }
 
@@ -147,7 +147,7 @@ var AppFoldersBlur = class AppFoldersBlur {
     blur_appfolders() {
         let appDisplay = Main.overview._overview.controls._appDisplay;
 
-        if (this.prefs.HACKS_LEVEL >= 1)
+        if (this.prefs.HACKS_LEVEL === 1 || this.prefs.HACKS_LEVEL === 2)
             this._log(`appfolders hack level ${this.prefs.HACKS_LEVEL}`);
 
         appDisplay._folderIcons.forEach(icon => {
@@ -194,7 +194,7 @@ var AppFoldersBlur = class AppFoldersBlur {
             //
             // [1]: https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/2857
 
-            if (this.prefs.HACKS_LEVEL >= 1) {
+            if (this.prefs.HACKS_LEVEL === 1 || this.prefs.HACKS_LEVEL === 2) {
                 this.paint_signals.disconnect_all_for_actor(icon._dialog);
                 this.paint_signals.connect(icon._dialog, blur_effect);
             } else {
@@ -255,6 +255,6 @@ var AppFoldersBlur = class AppFoldersBlur {
 
     _log(str) {
         if (this.prefs.DEBUG)
-            log(`[Blur my Shell] ${str}`);
+            log(`[Blur my Shell > appfolders]   ${str}`);
     }
 };

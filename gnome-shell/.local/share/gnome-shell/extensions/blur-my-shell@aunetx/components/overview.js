@@ -23,6 +23,8 @@ var OverviewBlur = class OverviewBlur {
         this._log("blurring overview");
 
         // connect to every background change (even without changing image)
+        // FIXME this signal is fired very often, so we should find another one
+        //       fired only when necessary (but that still catches all cases)
         this.connections.connect(
             Main.layoutManager._backgroundGroup,
             'notify',
@@ -62,6 +64,7 @@ var OverviewBlur = class OverviewBlur {
         this._original_PrepareSwitch = wac_proto._prepareWorkspaceSwitch;
         this._original_FinishSwitch = wac_proto._finishWorkspaceSwitch;
 
+        const w_m = global.workspace_manager;
         const outer_this = this;
 
         // create a blurred background actor for each monitor during a workspace
@@ -70,11 +73,24 @@ var OverviewBlur = class OverviewBlur {
             outer_this._log("prepare workspace switch");
             outer_this._original_PrepareSwitch.apply(this, params);
 
+            // this permits to show the blur behind windows that are on
+            // workspaces on the left and right
+            if (
+                outer_this.prefs.applications.BLUR
+            ) {
+                let ws_index = w_m.get_active_workspace_index();
+                [ws_index - 1, ws_index + 1].forEach(
+                    i => w_m.get_workspace_by_index(i)?.list_windows().forEach(
+                        window => window.get_compositor_private().show()
+                    )
+                );
+            }
+
             Main.layoutManager.monitors.forEach(monitor => {
                 if (
                     !(
                         Meta.prefs_get_workspaces_only_on_primary() &&
-                        (monitor != Main.layoutManager.primaryMonitor)
+                        (monitor !== Main.layoutManager.primaryMonitor)
                     )
                 ) {
                     const bg_actor = outer_this.create_background_actor(
@@ -97,6 +113,17 @@ var OverviewBlur = class OverviewBlur {
             outer_this._log("finish workspace switch");
             outer_this._original_FinishSwitch.apply(this, params);
 
+            // this hides windows that are not on the current workspace
+            if (
+                outer_this.prefs.applications.BLUR
+            )
+                for (let i = 0; i < w_m.get_n_workspaces(); i++) {
+                    if (i != w_m.get_active_workspace_index())
+                        w_m.get_workspace_by_index(i)?.list_windows().forEach(
+                            window => window.get_compositor_private().hide()
+                        );
+                }
+
             outer_this._workspace_switch_bg_actors.forEach(actor => {
                 actor.destroy();
             });
@@ -107,7 +134,7 @@ var OverviewBlur = class OverviewBlur {
     update_backgrounds() {
         // remove every old background
         Main.layoutManager.overviewGroup.get_children().forEach(actor => {
-            if (actor.constructor.name == 'Meta_BackgroundActor') {
+            if (actor.constructor.name === 'Meta_BackgroundActor') {
                 Main.layoutManager.overviewGroup.remove_child(actor);
                 actor.destroy();
             }
@@ -144,9 +171,13 @@ var OverviewBlur = class OverviewBlur {
                 : this.prefs.BRIGHTNESS,
             sigma: this.prefs.overview.CUSTOMIZE
                 ? this.prefs.overview.SIGMA
-                : this.prefs.SIGMA,
+                : this.prefs.SIGMA
+                * monitor.geometry_scale,
             mode: Shell.BlurMode.ACTOR
         });
+
+        // store the scale in the effect in order to retrieve it in set_sigma
+        blur_effect.scale = monitor.geometry_scale;
 
         let color_effect = new ColorEffect({
             color: this.prefs.overview.CUSTOMIZE
@@ -201,7 +232,7 @@ var OverviewBlur = class OverviewBlur {
 
     set_sigma(s) {
         this.effects.forEach(effect => {
-            effect.blur_effect.sigma = s;
+            effect.blur_effect.sigma = s * effect.blur_effect.scale;
         });
     }
 
@@ -232,7 +263,7 @@ var OverviewBlur = class OverviewBlur {
     disable() {
         this._log("removing blur from overview");
         Main.layoutManager.overviewGroup.get_children().forEach(actor => {
-            if (actor.constructor.name == 'Meta_BackgroundActor') {
+            if (actor.constructor.name === 'Meta_BackgroundActor') {
                 Main.layoutManager.overviewGroup.remove_child(actor);
             }
         });
@@ -253,6 +284,6 @@ var OverviewBlur = class OverviewBlur {
 
     _log(str) {
         if (this.prefs.DEBUG)
-            log(`[Blur my Shell] ${str}`);
+            log(`[Blur my Shell > overview]     ${str}`);
     }
 };
