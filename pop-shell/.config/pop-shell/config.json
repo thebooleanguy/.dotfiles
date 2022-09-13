@@ -33,6 +33,14 @@
     {
       "class": "java-lang-Thread",
       "title": "JDownloader Updater"
+    },
+    {
+      "class": "engrampa",
+      "title": "fhd.265.rar"
+    },
+    {
+      "class": "org.gnome.Calculator",
+      "title": "Calculator"
     }
   ],
   "skiptaskbarhidden": [],
