@@ -362,24 +362,27 @@ var WindowManager = GObject.registerClass(
 
             this._setup_maximized_handlers();
 
-            win.move_to_monitor(this.current_monitor_index);
-            this._update_window_geometry();
-
             const mapped = this._current_window_mapped();
             if (!mapped) {
                 if (win.get_client_type() === Meta.WindowClientType.WAYLAND) {
+                    this._schedule_geometry_fixup(this.current_window);
+                    this.current_window.move_to_monitor(this.current_monitor_index);
+
                     const map_handler_id = this.current_window_connections.connect(global.window_manager, 'map', (wm, actor) => {
                         if (!this._check_current_window(win) || actor.meta_window !== win)
                             return;
 
                         this.current_window_connections.disconnect(global.window_manager, map_handler_id);
-                        win.move_to_monitor(this.current_monitor_index);
-                        this._update_window_geometry();
+                        this._update_window_geometry(true);
                     });
+                } else {
+                    this._update_window_geometry(true);
                 }
 
                 if (this.settings.get_boolean('override-window-animation') && !this.show_animation)
                     Main.wm.skipNextEffect(this.current_window.get_compositor_private());
+            } else {
+                this._update_window_geometry(true);
             }
 
             this.current_window_connections.connect(global.display, 'grab-op-end', this.update_size_setting_on_grab_end.bind(this));
@@ -455,8 +458,8 @@ var WindowManager = GObject.registerClass(
                 return;
 
             this.geometry_fixup_connections.disconnect();
-            this.geometry_fixup_connections.connect(win, 'position-changed', this._update_window_geometry.bind(this));
-            this.geometry_fixup_connections.connect(win, 'size-changed', this._update_window_geometry.bind(this));
+            this.geometry_fixup_connections.connect(win, 'position-changed', () => this._update_window_geometry());
+            this.geometry_fixup_connections.connect(win, 'size-changed', () => this._update_window_geometry());
         }
 
         _unmaximize_done() {
@@ -543,11 +546,16 @@ var WindowManager = GObject.registerClass(
                 this.settings.set_boolean('window-maximize', false);
         }
 
-        _update_window_geometry() {
+        _update_window_geometry(force_monitor = false) {
             this.geometry_fixup_connections.disconnect();
 
             if (!this.current_window)
                 return;
+
+            if (force_monitor || this.current_window.get_monitor() !== this.current_monitor_index) {
+                this._schedule_geometry_fixup(this.current_window);
+                this.current_window.move_to_monitor(this.current_monitor_index);
+            }
 
             if (this.settings.get_boolean('window-maximize'))
                 return;

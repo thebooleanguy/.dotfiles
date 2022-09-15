@@ -313,8 +313,16 @@ var AppWindow = GObject.registerClass(
 
             const display = Gdk.Display.get_default();
 
-            if (display.constructor.$gtype.name === 'GdkWaylandDisplay')
-                this.rx.connect(this, 'map', () => this.sync_size_with_extension());
+            if (display.constructor.$gtype.name === 'GdkWaylandDisplay') {
+                this.rx.connect(this.extension_dbus, 'g-properties-changed', () => {
+                    if (!this.visible)
+                        this.sync_size_with_extension();
+                });
+                this.rx.connect(this, 'unmap-event', () => {
+                    this.sync_size_with_extension();
+                });
+                this.sync_size_with_extension();
+            }
         }
 
         adjust_double_setting(name, difference, min = 0.0, max = 1.0) {
@@ -462,13 +470,18 @@ var AppWindow = GObject.registerClass(
             if (this.is_maximized)
                 return;
 
-            const [target_x_, target_y_, target_w, target_h] = this.extension_dbus.GetTargetRectSync();
-            const w = Math.floor(target_w / this.scale_factor);
-            const h = Math.floor(target_h / this.scale_factor);
+            const display = this.get_display();
 
-            this.set_default_size(w, h);
+            const [target_x, target_y, target_w, target_h] = this.extension_dbus.GetTargetRectSync();
+            const target_monitor = display.get_monitor_at_point(target_x, target_y);
+
+            const w = Math.floor(target_w / target_monitor.scale_factor);
+            const h = Math.floor(target_h / target_monitor.scale_factor);
+
             this.resize(w, h);
-            this.window.resize(w, h);
+
+            if (this.window)
+                this.window.resize(w, h);
         }
     }
 );

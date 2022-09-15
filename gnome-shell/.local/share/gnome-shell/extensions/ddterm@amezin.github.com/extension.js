@@ -30,8 +30,6 @@ const { ConnectionSet } = Me.imports.connectionset;
 const { PanelIconProxy } = Me.imports.panelicon;
 const { WindowManager } = Me.imports.wm;
 
-let tests = null;
-
 var settings = null;
 var window_manager = null;
 
@@ -124,12 +122,6 @@ class ExtensionDBusInterface {
 
 function init() {
     imports.misc.extensionUtils.initTranslations();
-
-    try {
-        tests = Me.imports.test.extension_tests;
-    } catch {
-        // Tests aren't included in end user (extensions.gnome.org) packages
-    }
 }
 
 function enable() {
@@ -189,20 +181,15 @@ function enable() {
 
     connections.connect(window_manager, 'notify::target-rect', () => {
         dbus_interface.dbus.emit_property_changed('TargetRect', new GLib.Variant('(iiii)', dbus_interface.TargetRect));
+        dbus_interface.dbus.flush();
     });
 
     Meta.get_window_actors(global.display).forEach(actor => {
         watch_window(actor.meta_window);
     });
-
-    if (tests)
-        tests.enable();
 }
 
 function disable() {
-    if (tests)
-        tests.disable();
-
     Main.wm.removeKeybinding('ddterm-toggle-hotkey');
     Main.wm.removeKeybinding('ddterm-activate-hotkey');
 
