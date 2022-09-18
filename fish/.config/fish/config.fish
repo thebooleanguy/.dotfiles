@@ -71,6 +71,12 @@ alias mp3='yt-dlp -x --audio-format mp3'
 alias mp4='yt-dlp -f "bv*[height<=480][ext=mp4]+ba[ext=m4a]/b[height<=480][ext=mp4] / bv*+ba
 /b" --all-subs --write-sub'
 
+#mpv
+alias mpv='mpv --af=acompressor,loudnorm=I=-15 --volume-max=150 --volume=100'
+
+#filebot amc
+alias amc='/home/xany/.dotfiles/scripts/amc.sh'
+
 ##Startup Commands
 xset r rate 300 50
 colorscript random

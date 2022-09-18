@@ -1,26 +1,28 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
-    <application id="gparted.desktop" score="25.75" last-seen="1663037894"/>
-    <application id="gnome-power-panel.desktop" score="0" last-seen="0"/>
-    <application id="kitty.desktop" score="689.5" last-seen="1663244761"/>
-    <application id="org.gnome.tweaks.desktop" score="1" last-seen="1663240551"/>
-    <application id="install4j_o74srs-JDownloader2.desktop" score="8179.875" last-seen="1663243983"/>
-    <application id="brave-browser.desktop" score="376.5" last-seen="1663068634"/>
-    <application id="codium.desktop" score="5791.875" last-seen="1663219740"/>
-    <application id="org.gnome.Shell.Extensions.desktop" score="0" last-seen="1663247049"/>
-    <application id="org.gnome.clocks.desktop" score="182.5" last-seen="1663079530"/>
-    <application id="filebot.desktop" score="8" last-seen="1663053817"/>
-    <application id="engrampa.desktop" score="2.375" last-seen="1663244673"/>
-    <application id="notion-app-enhanced.desktop" score="500.5" last-seen="1663126237"/>
-    <application id="mpv.desktop" score="14490.875" last-seen="1663245869"/>
-    <application id="nemo.desktop" score="0" last-seen="1663040289"/>
-    <application id="firefox.desktop" score="9571.5" last-seen="1663247041"/>
     <application id="org.gnome.Calculator.desktop" score="7" last-seen="1663245093"/>
-    <application id="pcmanfm.desktop" score="2220.125" last-seen="1663245881"/>
-    <application id="com.mattjakeman.ExtensionManager.desktop" score="18" last-seen="1663247050"/>
-    <application id="org.gnome.Rhythmbox3.desktop" score="303.125" last-seen="1662972612"/>
-    <application id="xed.desktop" score="1" last-seen="1663098251"/>
-    <application id="org.gnome.Settings.desktop" score="0" last-seen="1663239259"/>
+    <application id="xed.desktop" score="13" last-seen="1663472655"/>
+    <application id="org.gnome.clocks.desktop" score="297.5" last-seen="1663430621"/>
+    <application id="mpv.desktop" score="18938.875" last-seen="1663504322"/>
+    <application id="filebot.desktop" score="78" last-seen="1663468548"/>
+    <application id="org.gnome.Shell.Extensions.desktop" score="0" last-seen="1663247369"/>
+    <application id="pcmanfm.desktop" score="4885.125" last-seen="1663505079"/>
+    <application id="install4j_o74srs-JDownloader2.desktop" score="10077.875" last-seen="1663505150"/>
+    <application id="org.gnome.Rhythmbox3.desktop" score="667.125" last-seen="1663504096"/>
+    <application id="gparted.desktop" score="52.75" last-seen="1663403043"/>
+    <application id="nemo.desktop" score="2" last-seen="1663403807"/>
+    <application id="brave-browser.desktop" score="376.5" last-seen="1663068634"/>
+    <application id="org.gnome.tweaks.desktop" score="1" last-seen="1663240551"/>
+    <application id="thunderbird.desktop" score="3" last-seen="1663304812"/>
+    <application id="kitty.desktop" score="2895.5" last-seen="1663505318"/>
+    <application id="org.gnome.Settings.desktop" score="3" last-seen="1663438597"/>
+    <application id="com.mattjakeman.ExtensionManager.desktop" score="21" last-seen="1663247387"/>
+    <application id="firefox.desktop" score="15302.5" last-seen="1663505328"/>
+    <application id="codium.desktop" score="5856.875" last-seen="1663504752"/>
+    <application id="org.qbittorrent.qBittorrent.desktop" score="5735" last-seen="1663505139"/>
+    <application id="engrampa.desktop" score="3.375" last-seen="1663420971"/>
+    <application id="arronax.desktop" score="30" last-seen="1663436159"/>
+    <application id="notion-app-enhanced.desktop" score="501.5" last-seen="1663306319"/>
   </context>
 </application-state>

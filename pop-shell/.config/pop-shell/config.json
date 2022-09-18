@@ -1,48 +1,5 @@
 {
-  "float": [
-    {
-      "class": "pop-shell-example",
-      "title": "pop-shell-example"
-    },
-    {
-      "class": "xdman-Main"
-    },
-    {
-      "class": "xarchiver",
-      "title": "xarchiver"
-    },
-    {
-      "class": "thunar",
-      "title": "File Manager Preferences"
-    },
-    {
-      "class": "engrampa",
-      "title": "Extract archive"
-    },
-    {
-      "class": "Anydesk"
-    },
-    {
-      "class": "engrampa",
-      "title": "Mille Soya ( මිල්ලේ සොයා ) 2004 DVD 720p 2Ch HEVC 10bit x265.7z"
-    },
-    {
-      "class": "install4j-org-jdownloader-update-launcher-JDLauncher",
-      "title": "JDownloader 2 - Updates available!"
-    },
-    {
-      "class": "java-lang-Thread",
-      "title": "JDownloader Updater"
-    },
-    {
-      "class": "engrampa",
-      "title": "fhd.265.rar"
-    },
-    {
-      "class": "org.gnome.Calculator",
-      "title": "Calculator"
-    }
-  ],
+  "float": [],
   "skiptaskbarhidden": [],
   "log_on_focus": false,
   "default_pointer_position": "TOP_LEFT"
