@@ -1,5 +1,10 @@
 {
-  "float": [],
+  "float": [
+    {
+      "class": "cover-thumbnailer-gui",
+      "title": "Cover Thumbnailer"
+    }
+  ],
   "skiptaskbarhidden": [],
   "log_on_focus": false,
   "default_pointer_position": "TOP_LEFT"

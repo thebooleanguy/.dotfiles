@@ -2,27 +2,28 @@
 <application-state>
   <context id="">
     <application id="org.gnome.Calculator.desktop" score="7" last-seen="1663245093"/>
-    <application id="xed.desktop" score="13" last-seen="1663472655"/>
-    <application id="org.gnome.clocks.desktop" score="297.5" last-seen="1663430621"/>
-    <application id="mpv.desktop" score="18938.875" last-seen="1663504322"/>
+    <application id="xed.desktop" score="16" last-seen="1663554050"/>
+    <application id="cover-thumbnailer-gui.desktop" score="3" last-seen="1663553071"/>
+    <application id="org.gnome.clocks.desktop" score="367.5" last-seen="1663512165"/>
+    <application id="mpv.desktop" score="20803.875" last-seen="1663560106"/>
     <application id="filebot.desktop" score="78" last-seen="1663468548"/>
     <application id="org.gnome.Shell.Extensions.desktop" score="0" last-seen="1663247369"/>
-    <application id="pcmanfm.desktop" score="4885.125" last-seen="1663505079"/>
-    <application id="install4j_o74srs-JDownloader2.desktop" score="10077.875" last-seen="1663505150"/>
-    <application id="org.gnome.Rhythmbox3.desktop" score="667.125" last-seen="1663504096"/>
+    <application id="install4j_o74srs-JDownloader2.desktop" score="13783.875" last-seen="1663551977"/>
+    <application id="org.gnome.Rhythmbox3.desktop" score="667.125" last-seen="1663555524"/>
     <application id="gparted.desktop" score="52.75" last-seen="1663403043"/>
-    <application id="nemo.desktop" score="2" last-seen="1663403807"/>
+    <application id="nemo.desktop" score="12" last-seen="1663560741"/>
     <application id="brave-browser.desktop" score="376.5" last-seen="1663068634"/>
     <application id="org.gnome.tweaks.desktop" score="1" last-seen="1663240551"/>
     <application id="thunderbird.desktop" score="3" last-seen="1663304812"/>
-    <application id="kitty.desktop" score="2895.5" last-seen="1663505318"/>
-    <application id="org.gnome.Settings.desktop" score="3" last-seen="1663438597"/>
+    <application id="kitty.desktop" score="3313.5" last-seen="1663565732"/>
+    <application id="org.gnome.Settings.desktop" score="4" last-seen="1663561572"/>
     <application id="com.mattjakeman.ExtensionManager.desktop" score="21" last-seen="1663247387"/>
-    <application id="firefox.desktop" score="15302.5" last-seen="1663505328"/>
-    <application id="codium.desktop" score="5856.875" last-seen="1663504752"/>
-    <application id="org.qbittorrent.qBittorrent.desktop" score="5735" last-seen="1663505139"/>
-    <application id="engrampa.desktop" score="3.375" last-seen="1663420971"/>
-    <application id="arronax.desktop" score="30" last-seen="1663436159"/>
+    <application id="firefox.desktop" score="16258.5" last-seen="1663565678"/>
+    <application id="codium.desktop" score="5862.875" last-seen="1663555522"/>
+    <application id="org.qbittorrent.qBittorrent.desktop" score="6525" last-seen="1663553739"/>
+    <application id="engrampa.desktop" score="12.375" last-seen="1663565486"/>
+    <application id="arronax.desktop" score="33" last-seen="1663554997"/>
     <application id="notion-app-enhanced.desktop" score="501.5" last-seen="1663306319"/>
+    <application id="caja.desktop" score="186" last-seen="1663565613"/>
   </context>
 </application-state>
